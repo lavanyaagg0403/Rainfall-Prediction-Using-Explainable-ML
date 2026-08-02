@@ -1,4 +1,4 @@
-# 🌧️ Rainfall Prediction Using Random Forest Regression
+# 🌧️ Rainfall Prediction Using Explainable Machine Learning
 
 A machine learning project that predicts daily rainfall using historical weather data from major Indian cities. The project applies data preprocessing, exploratory data analysis (EDA), feature engineering, and Random Forest Regression to analyse rainfall patterns and identify the most influential weather variables through feature importance analysis.
 
