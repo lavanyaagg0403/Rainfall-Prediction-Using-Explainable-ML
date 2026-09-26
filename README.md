@@ -1,135 +1,109 @@
-# 🌧️ Rainfall Prediction Using Explainable Machine Learning
+# Rainfall Prediction Using Explainable Machine Learning
 
-A machine learning project that predicts daily rainfall using historical weather data from major Indian cities. The project applies data preprocessing, exploratory data analysis (EDA), feature engineering, and Random Forest Regression to analyse rainfall patterns and identify the most influential weather variables through feature importance analysis.
+## Overview
 
----
+This project uses machine learning to predict daily rainfall from historical weather data for Indian cities. A Random Forest Regressor is used for rainfall prediction, and SHAP (SHapley Additive exPlanations) is used to examine how individual features contribute to the model's predictions.
 
-## 📌 Project Overview
+The project covers data preprocessing, exploratory analysis, feature engineering, model training, evaluation, feature importance analysis, and model interpretation.
 
-Rainfall prediction plays an important role in agriculture, water resource management, and disaster preparedness. This project uses a historical weather dataset covering multiple Indian cities from **2000 to 2024** to build a regression model capable of predicting daily rainfall.
+## Dataset
 
-The workflow includes:
+The project uses daily weather data covering the period from 2000 to 2024.
 
-- Data preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature engineering
-- Random Forest Regression
-- Model evaluation
-- Feature importance analysis
-
----
-
-## 📂 Dataset
-
-**Dataset:** India Daily Weather (2000–2024) – Major Cities
-
-**Source:** Kaggle
-
-**Records:** 91,320 daily observations
-
-**Features include:**
+The dataset contains weather-related variables such as:
 
 - City
-- Maximum & minimum temperature
+- Date
+- Maximum temperature
+- Minimum temperature
 - Apparent temperature
-- Rainfall
 - Weather code
 - Wind speed
 - Wind gusts
 - Wind direction
-- Date
+- Rainfall
 
-**Target Variable**
+The target variable is daily rainfall.
 
-- `rain_sum`
+## Methodology
 
----
+The following steps were performed:
 
-## ⚙️ Technologies Used
+1. Loaded and examined the weather dataset.
+2. Performed data preprocessing and handled the required data transformations.
+3. Extracted date-related features such as year, month, and day.
+4. Selected the weather variables used for prediction.
+5. Split the data into training and testing sets.
+6. Trained a Random Forest Regression model.
+7. Evaluated the model using MAE, RMSE, and R².
+8. Examined the feature importance provided by the Random Forest model.
+9. Applied SHAP to examine the contribution of individual features to model predictions.
+10. Used SHAP summary, feature importance, and waterfall plots for model interpretation.
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Google Colab
+## Model
 
----
+### Random Forest Regressor
 
-## 🔄 Project Workflow
+A Random Forest Regressor was selected to predict daily rainfall. Random Forest can model nonlinear relationships between the input weather variables and rainfall.
 
-1. Data Collection
-2. Data Preprocessing
-3. Exploratory Data Analysis (EDA)
-4. Feature Engineering
-5. Train-Test Split (80:20)
-6. Random Forest Regression
-7. Model Evaluation
-8. Feature Importance Analysis
-
----
-
-## 📊 Model Performance
+The model was evaluated on the test dataset using the following metrics:
 
 | Metric | Value |
-|--------|------:|
+|---|---:|
 | MAE | 1.091 |
 | RMSE | 3.799 |
-| R² Score | 0.820 |
+| R² | 0.820 |
 
-These results indicate that the model explains approximately **82% of the variation** in daily rainfall within the dataset.
+These values correspond to the current model configuration and test split used in the notebook.
 
----
+## Explainability
 
-## 📈 Visualizations
+SHAP was used to examine how the trained Random Forest model arrives at its predictions.
 
-The notebook includes:
+Three types of SHAP visualizations are included in the notebook:
 
-- Rainfall Distribution Histogram
-- Average Rainfall by City
-- Correlation Heatmap
-- Actual vs Predicted Scatter Plot
-- Feature Importance Plot
+### SHAP Summary Plot
 
----
+The summary plot shows the contribution of the input features across a representative sample of test observations. It provides information about both the magnitude and direction of feature contributions.
 
-## 📁 Repository Structure
+### SHAP Feature Importance
+
+The SHAP feature importance plot ranks features according to their average contribution magnitude to the model's predictions.
+
+### SHAP Waterfall Plot
+
+The waterfall plot explains an individual prediction by showing how the feature contributions move the prediction from the model's baseline value to the final predicted value.
+
+For the individual example included in the notebook:
+
+- Actual rainfall: 26.40
+- Predicted rainfall: 27.98
+
+The SHAP explanation was checked by reconstructing the prediction from the SHAP base value and feature contributions. The reconstructed value matched the model prediction within floating-point precision.
+
+The SHAP analysis is used to explain the behavior of the trained model. The feature contributions should not be interpreted as evidence of causal relationships.
+
+## Visualizations
+
+The notebook contains the following visualizations:
+
+- Rainfall distribution
+- Average rainfall by city
+- Correlation heatmap
+- Actual vs. predicted rainfall
+- Random Forest feature importance
+- SHAP summary plot
+- SHAP feature importance plot
+- SHAP waterfall plot
+
+## Repository Structure
 
 ```text
-Rainfall-Prediction-Using-Random-Forest
+Rainfall-Prediction-Using-Explainable-ML/
 │
 ├── README.md
-├── Rainfall_Prediction.ipynb
+├── Rainfall_Prediction_Using_Random_Forest.ipynb
 ├── requirements.txt
 ├── .gitignore
 ├── LICENSE
 └── images/
-```
-
----
-
-## 🚀 Future Improvements
-
-- Compare multiple regression models
-- Use real-time weather data
-- Explore SHAP or LIME for deeper model interpretability
-- Develop an interactive dashboard for rainfall prediction
-
----
-
-## 👩‍💻 Author
-
-**Lavanya Aggarwal**
-
-B.Tech Computer Science Engineering
-
-Amity University Noida
-
-GitHub: https://github.com/lavanyaagg0403
-
-LinkedIn: https://www.linkedin.com/in/lavanya-agg0403/
-
----
-
-## ⭐ If you found this project useful, consider giving it a star.
