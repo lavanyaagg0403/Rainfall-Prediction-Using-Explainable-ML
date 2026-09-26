@@ -107,3 +107,44 @@ Rainfall-Prediction-Using-Explainable-ML/
 ├── .gitignore
 ├── LICENSE
 └── images/
+
+Requirements
+
+The project uses Python and the following libraries:
+
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+shap
+
+The required packages are listed in requirements.txt.
+
+Running the Project
+
+The notebook can be run using Google Colab or a local Jupyter environment.
+
+Clone or download the repository.
+Install the packages listed in requirements.txt.
+Open Rainfall_Prediction_Using_Random_Forest.ipynb.
+Provide the required dataset when prompted.
+Run the notebook cells sequentially.
+Future Work
+
+Possible extensions include:
+
+Hyperparameter tuning of the Random Forest model
+Comparison with other regression models
+Cross-validation
+Evaluation across individual cities
+Integration of additional weather variables
+Development of a rainfall prediction interface
+Author
+
+Lavanya Aggarwal
+
+B.Tech Computer Science Engineering
+Amity University Noida
+
+GitHub: https://github.com/lavanyaagg0403
