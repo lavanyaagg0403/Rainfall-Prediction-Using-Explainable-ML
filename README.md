@@ -6,6 +6,8 @@ This project uses machine learning to predict daily rainfall from historical wea
 
 The project covers data preprocessing, exploratory analysis, feature engineering, model training, evaluation, feature importance analysis, and model interpretation.
 
+---
+
 ## Dataset
 
 The project uses daily weather data covering the period from 2000 to 2024.
@@ -25,6 +27,8 @@ The dataset contains weather-related variables such as:
 
 The target variable is daily rainfall.
 
+---
+
 ## Methodology
 
 The following steps were performed:
@@ -39,6 +43,8 @@ The following steps were performed:
 8. Examined the feature importance provided by the Random Forest model.
 9. Applied SHAP to examine the contribution of individual features to model predictions.
 10. Used SHAP summary, feature importance, and waterfall plots for model interpretation.
+
+---
 
 ## Model
 
@@ -55,6 +61,8 @@ The model was evaluated on the test dataset using the following metrics:
 | R² | 0.820 |
 
 These values correspond to the current model configuration and test split used in the notebook.
+
+---
 
 ## Explainability
 
@@ -83,6 +91,8 @@ The SHAP explanation was checked by reconstructing the prediction from the SHAP 
 
 The SHAP analysis is used to explain the behavior of the trained model. The feature contributions should not be interpreted as evidence of causal relationships.
 
+---
+
 ## Visualizations
 
 The notebook contains the following visualizations:
@@ -96,6 +106,8 @@ The notebook contains the following visualizations:
 - SHAP feature importance plot
 - SHAP waterfall plot
 
+---
+
 ## Repository Structure
 
 ```text
@@ -107,42 +119,53 @@ Rainfall-Prediction-Using-Explainable-ML/
 ├── .gitignore
 ├── LICENSE
 └── images/
+```
+
+---
 
 ## Requirements
 
 The project uses Python and the following libraries:
 
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-shap
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- shap
 
-The required packages are listed in requirements.txt.
+The required packages are listed in `requirements.txt`.
+
+---
 
 ## Running the Project
 
 The notebook can be run using Google Colab or a local Jupyter environment.
 
-1.Clone or download the repository.
-2.Install the packages listed in requirements.txt.
-3.Open Rainfall_Prediction_Using_Random_Forest.ipynb.
-4.Provide the required dataset when prompted.
-5.Run the notebook cells sequentially.
+1. Clone or download the repository.
+2. Install the packages listed in `requirements.txt`.
+3. Open `Rainfall_Prediction_Using_Random_Forest.ipynb`.
+4. Provide the required dataset when prompted.
+5. Run the notebook cells sequentially.
+
+---
 
 ## Future Work
- Possible extensions include:
--Hyperparameter tuning of the Random Forest model
--Comparison with other regression models
--Cross-validation
--Evaluation across individual cities
--Integration of additional weather variables
--Development of a rainfall prediction interface
+
+Possible extensions include:
+
+- Hyperparameter tuning of the Random Forest model
+- Comparison with other regression models
+- Cross-validation
+- Evaluation across individual cities
+- Integration of additional weather variables
+- Development of a rainfall prediction interface
+
+---
 
 ## Author
 
-Lavanya Aggarwal
+**Lavanya Aggarwal**
 
 B.Tech Computer Science Engineering
 Amity University Noida
